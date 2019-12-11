@@ -5,13 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.listaequipos.paquetes.AdaptadorLigas;
 import com.example.listaequipos.utils.liga;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdaptadorLigas.OnLigaListener {
     RecyclerView recylerLigas, recylerEquipos;
     AdaptadorLigas adaptadorLigas;
     ArrayList<liga> listaLiga;
@@ -45,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
         recylerEquipos = findViewById(R.id.recyclerEquipos);
         recylerLigas = findViewById(R.id.recyclerLigas);
         listaLiga = new ArrayList();
-        adaptadorLigas = new AdaptadorLigas(listaLiga, getApplicationContext());
+        adaptadorLigas = new AdaptadorLigas(listaLiga, MainActivity.this);
     }
 
+    @Override
+    public void onLigaSelected(liga liga) {
+        Toast.makeText(getApplicationContext(), "Conectado"+liga.getNombre(), Toast.LENGTH_SHORT).show();
+    }
 }
