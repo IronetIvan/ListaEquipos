@@ -51,6 +51,6 @@ public class MainActivity extends AppCompatActivity implements AdaptadorLigas.On
 
     @Override
     public void onLigaSelected(liga liga) {
-        Toast.makeText(getApplicationContext(), "Conectado"+liga.getNombre(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Conectado: "+liga.getNombre(), Toast.LENGTH_SHORT).show();
     }
 }
