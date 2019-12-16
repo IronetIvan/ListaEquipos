@@ -33,4 +33,10 @@ public class DataSet {
         datos.add(new Equipo("Manchester", R.drawable.manchester));
         return datos;
     }
+    public ArrayList getEquiposIta(){
+        ArrayList datos = new ArrayList();
+        datos.add(new Equipo("Juventus", R.drawable.juventus));
+        datos.add(new Equipo("Inter Milan", R.drawable.inter));
+        return datos;
+    }
 }

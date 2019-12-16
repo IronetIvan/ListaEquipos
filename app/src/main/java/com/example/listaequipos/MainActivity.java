@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements AdaptadorLigas.On
                 listaEquipos = DataSet.newInstance().getEquiposEsp();
                 break;
             case "Serie A":
-
+                    listaEquipos = DataSet.newInstance().getEquiposIta();
                 break;
 
             case "Premier":
