@@ -21,6 +21,8 @@ public class AdaptadorLigas extends RecyclerView.Adapter<AdaptadorLigas.miHolder
     Context context;
     OnLigaListener listener;
 
+
+
     public AdaptadorLigas(List<liga> listaLigas, Context context) {
         this.listaLigas = listaLigas;
         this.context = context;
